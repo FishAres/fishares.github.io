@@ -1,11 +1,14 @@
 import React from "react";
-
 import "./App.css";
+
+function Header() {
+  return <nav className="nav-bar">Hello</nav>;
+}
 
 function App() {
   return (
     <>
-      <h1>"Meow"</h1>
+      <Header />
     </>
   );
 }
