@@ -2,14 +2,18 @@ import React from "react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 const Navbar = () => {
-  const items = ["Home", "About", "Research", "Contact"];
+  const items = ["Home", "Research", "CV", "Contact"];
+  const item_divs = ["home", "research", "cv", "contact"];
 
   const renderItems = () => {
     return (
       <ul style={{ listStyle: "none", margin: 0, padding: 0, display: "flex" }}>
         {items.map((item, index) => (
           <li key={index} style={{ margin: "0", padding: "14px 16px" }}>
-            <a href="#" style={{ color: "white", textDecoration: "none" }}>
+            <a
+              href={`#${item_divs[index]}`}
+              style={{ color: "white", textDecoration: "none" }}
+            >
               {item}
             </a>
           </li>
@@ -21,11 +25,10 @@ const Navbar = () => {
   const renderIcons = () => {
     return (
       <div>
-        <a
-          href="your-github-link"
-          style={{ color: "white", marginRight: "10px" }}
-        >
-          <FaGithub style={{ fontSize: "20px" }} />
+        <a href="your-github-link">
+          <FaGithub
+            style={{ color: "white", fontSize: "20px", marginRight: "6px" }}
+          />
         </a>
         <a
           href="your-linkedin-link"
