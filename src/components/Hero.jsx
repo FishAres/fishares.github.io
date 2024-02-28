@@ -4,7 +4,7 @@ const Hero = () => {
   return (
     <div
       style={{
-        backgroundImage: `url('../public/assets/top_img.jpg')`,
+        backgroundImage: `url('./public/assets/top_img.jpg')`,
         backgroundSize: "cover",
         backgroundPosition: "center",
         height: "100vh",
