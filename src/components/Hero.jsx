@@ -1,10 +1,12 @@
 import React from "react";
+import top_img from "../../public/assets/top_img.jpg";
 
 const Hero = () => {
   return (
     <div
       style={{
-        backgroundImage: `url('./public/assets/top_img.jpg')`,
+        // backgroundImage: `url('./public/assets/top_img.jpg')`,
+        backgroundImage: `url(${top_img})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
         height: "100vh",
