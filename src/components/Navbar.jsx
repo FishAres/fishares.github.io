@@ -1,0 +1,56 @@
+import React from "react";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+
+const Navbar = () => {
+  const items = ["Home", "About", "Research", "Contact"];
+
+  const renderItems = () => {
+    return (
+      <ul style={{ listStyle: "none", margin: 0, padding: 0, display: "flex" }}>
+        {items.map((item, index) => (
+          <li key={index} style={{ margin: "0", padding: "14px 16px" }}>
+            <a href="#" style={{ color: "white", textDecoration: "none" }}>
+              {item}
+            </a>
+          </li>
+        ))}
+      </ul>
+    );
+  };
+
+  const renderIcons = () => {
+    return (
+      <div>
+        <a
+          href="your-github-link"
+          style={{ color: "white", marginRight: "10px" }}
+        >
+          <FaGithub style={{ fontSize: "20px" }} />
+        </a>
+        <a
+          href="your-linkedin-link"
+          style={{ color: "white", marginRight: "10px" }}
+        >
+          <FaLinkedin style={{ fontSize: "20px" }} />
+        </a>
+      </div>
+    );
+  };
+
+  return (
+    <nav
+      style={{
+        backgroundColor: "#333",
+        overflow: "hidden",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "space-between",
+      }}
+    >
+      {renderItems()}
+      {renderIcons()}
+    </nav>
+  );
+};
+
+export default Navbar;
