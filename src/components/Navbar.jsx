@@ -25,13 +25,13 @@ const Navbar = () => {
   const renderIcons = () => {
     return (
       <div>
-        <a href="your-github-link">
+        <a href="https://github.com/FishAres">
           <FaGithub
             style={{ color: "white", fontSize: "20px", marginRight: "6px" }}
           />
         </a>
         <a
-          href="your-linkedin-link"
+          href="https://www.linkedin.com/in/aris-fiser/"
           style={{ color: "white", marginRight: "10px" }}
         >
           <FaLinkedin style={{ fontSize: "20px" }} />
