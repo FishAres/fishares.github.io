@@ -1,17 +1,22 @@
 import React from "react";
 import "./App.css";
-import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import FishyHero from "./components/FishyHero";
-import Resume from "./components/Resume";
+import Components from "./components";
+const { Navbar, FishyHero, Research, Resume, Blog, Contact } = Components;
+
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
-    <>
+    <BrowserRouter>
       <Navbar />
-      <FishyHero />
-      <Resume />
-    </>
+      <Routes>
+        <Route path="/" element={<FishyHero />} />
+        <Route path="research" element={<Research />} />
+        <Route path="cv" element={<Resume />} />
+        <Route path="blog" element={<Blog />} />
+        <Route path="contact" element={<Contact />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
