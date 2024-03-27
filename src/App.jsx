@@ -3,6 +3,8 @@ import "./App.css";
 import Components from "./components";
 const { Navbar, FishyHero, Research, Resume, Blog, Contact } = Components;
 
+import Hero from "./components/HeroMouseOn";
+
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
@@ -10,7 +12,7 @@ function App() {
     <BrowserRouter>
       <Navbar />
       <Routes>
-        <Route path="/" element={<FishyHero />} />
+        <Route path="/" element={<Hero />} />
         <Route path="research" element={<Research />} />
         <Route path="cv" element={<Resume />} />
         <Route path="blog" element={<Blog />} />
