@@ -1,4 +1,3 @@
-import React from "react";
 import top_img from "../../public/assets/top_img.jpg";
 
 const Hero = () => {

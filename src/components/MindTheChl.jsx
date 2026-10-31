@@ -1,4 +1,3 @@
-import React from "react";
 import LinkText from "./LinkText";
 import chl_arch from "../../public/assets/chl_arch.png";
 import chl_io_pred from "../../public/assets/chl_io_pred.png";

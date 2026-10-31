@@ -1,4 +1,3 @@
-import React from "react";
 import fisherCV from "../../public/assets/FisherCV.pdf";
 import selfie from "../../public/assets/selfie.jpg";
 
