@@ -1,4 +1,3 @@
-import React from "react";
 import LinkText from "./LinkText";
 import rnp_fig from "../../public/assets/rnp_fig.png";
 import chl_thumb from "../../public/assets/chl_thumb.png";

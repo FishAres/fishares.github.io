@@ -1,12 +1,10 @@
-import React from "react";
 import "./App.css";
 import Components from "./components";
-const { Navbar, FishyHero, Research, MindTheChl, Resume, Blog, Contact } =
-  Components;
+const { Navbar, Research, MindTheChl, Resume, Blog, Contact } = Components;
 
 import Hero from "./components/HeroMouseOn";
 
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router";
 
 function App() {
   return (

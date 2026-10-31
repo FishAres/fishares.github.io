@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import top_img from "../../public/assets/top_img.jpg";
 
 const Eye = () => {
