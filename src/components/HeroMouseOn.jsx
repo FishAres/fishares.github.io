@@ -27,15 +27,6 @@ const Eye = () => {
   );
 };
 
-const Eyes = () => {
-  return (
-    <div>
-      <Eye />
-      <Eye />
-    </div>
-  );
-};
-
 const Hero = () => {
   const [showEyes, setShowEyes] = useState(false);
 
