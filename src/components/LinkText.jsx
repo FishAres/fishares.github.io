@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function LinkText(props) {
   const [linkStyle, setLinkStyle] = React.useState({
@@ -13,6 +14,18 @@ export default function LinkText(props) {
   const handleMouseOut = () => {
     setLinkStyle({ textDecoration: "none", color: "inherit" });
   };
+
+  if (props.to) {
+    return (
+      <Link
+        to={props.to}
+        style={linkStyle}
+        onMouseOver={handleMouseOver}
+        onMouseOut={handleMouseOut}>
+        {props.children}
+      </Link>
+    );
+  }
 
   return (
     <a

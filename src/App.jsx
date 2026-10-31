@@ -1,7 +1,8 @@
 import React from "react";
 import "./App.css";
 import Components from "./components";
-const { Navbar, FishyHero, Research, Resume, Blog, Contact } = Components;
+const { Navbar, FishyHero, Research, MindTheChl, Resume, Blog, Contact } =
+  Components;
 
 import Hero from "./components/HeroMouseOn";
 
@@ -14,6 +15,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Hero />} />
         <Route path="research" element={<Research />} />
+        <Route path="research/mind-the-chl" element={<MindTheChl />} />
         <Route path="cv" element={<Resume />} />
         <Route path="blog" element={<Blog />} />
         <Route path="contact" element={<Contact />} />

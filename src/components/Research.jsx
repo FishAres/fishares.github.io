@@ -1,6 +1,7 @@
 import React from "react";
 import LinkText from "./LinkText";
 import rnp_fig from "../../public/assets/rnp_fig.png";
+import chl_thumb from "../../public/assets/chl_thumb.png";
 
 function RNP() {
   return (
@@ -38,11 +39,50 @@ function RNP() {
   );
 }
 
+function MindTheChl() {
+  return (
+    <div
+      style={{
+        display: "flex",
+        alignItems: "center",
+        fontFamily: "Inter",
+        fontWeight: 400,
+        textAlign: "left",
+        marginTop: "40px",
+      }}>
+      <img
+        style={{ marginRight: "20px", width: "40%", flexShrink: 0 }}
+        src={chl_thumb}
+      />
+      <div>
+        <h2>
+          <LinkText to="/research/mind-the-chl">
+            Mind the CHL gap: filling cloud gaps in satellite chlorophyll
+          </LinkText>
+        </h2>
+        <h3>
+          <p>
+            Satellites map ocean chlorophyll every day, but clouds hide much of
+            the sea on any given day.
+          </p>
+          <p>
+            Attention-based networks fill those gaps from neighbouring days and
+            physical ocean data, in the Indian Ocean and the Black Sea. On
+            held-out years they cut the error of a seasonal climatology by more
+            than half.
+          </p>
+        </h3>
+      </div>
+    </div>
+  );
+}
+
 export default function Research() {
   return (
     <>
       <h1>Research</h1>
       <RNP />
+      <MindTheChl />
     </>
   );
 }
