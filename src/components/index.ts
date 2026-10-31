@@ -6,13 +6,14 @@ import Contact from "./Contact";
 import Blog from "./Blog";
 import MindTheChl from "./MindTheChl";
 
-const Components = {};
-Components.Navbar = Navbar;
-Components.Research = Research;
-Components.Resume = Resume;
-Components.FishyHero = FishyHero;
-Components.Contact = Contact;
-Components.Blog = Blog;
-Components.MindTheChl = MindTheChl;
+const Components = {
+  Navbar,
+  Research,
+  Resume,
+  FishyHero,
+  Contact,
+  Blog,
+  MindTheChl,
+};
 
 export default Components;

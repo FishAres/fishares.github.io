@@ -1,9 +1,10 @@
+import type { CSSProperties, ReactNode } from "react";
 import LinkText from "./LinkText";
 import chl_arch from "../../public/assets/chl_arch.png";
 import chl_io_pred from "../../public/assets/chl_io_pred.png";
 import chl_blk_pred from "../../public/assets/chl_blk_pred.png";
 
-const page = {
+const page: CSSProperties = {
   maxWidth: "900px",
   margin: "0 auto",
   fontFamily: "Inter",
@@ -11,21 +12,23 @@ const page = {
   textAlign: "left",
   lineHeight: 1.55,
 };
-const figure = { margin: "24px 0" };
-const caption = { fontSize: "0.9em", color: "#555", marginTop: "6px" };
-const panelLabels = {
+const figure: CSSProperties = { margin: "24px 0" };
+const caption: CSSProperties = { fontSize: "0.9em", color: "#555", marginTop: "6px" };
+const panelLabels: CSSProperties = {
   display: "grid",
   gridTemplateColumns: "repeat(4, 1fr)",
   fontSize: "0.85em",
   fontWeight: 600,
   marginBottom: "4px",
 };
-const table = { borderCollapse: "collapse", width: "100%", fontSize: "0.95em" };
-const cell = { padding: "6px 10px", borderBottom: "1px solid #ddd" };
-const num = { ...cell, textAlign: "right", fontVariantNumeric: "tabular-nums" };
-const best = { fontWeight: 600 };
+const table: CSSProperties = { borderCollapse: "collapse", width: "100%", fontSize: "0.95em" };
+const cell: CSSProperties = { padding: "6px 10px", borderBottom: "1px solid #ddd" };
+const num: CSSProperties = { ...cell, textAlign: "right", fontVariantNumeric: "tabular-nums" };
+const best: CSSProperties = { fontWeight: 600 };
 
-function PredictionFigure({ src, children }) {
+type PredictionFigureProps = { src: string; children: ReactNode };
+
+function PredictionFigure({ src, children }: PredictionFigureProps) {
   return (
     <figure style={figure}>
       <div style={panelLabels}>
@@ -40,7 +43,11 @@ function PredictionFigure({ src, children }) {
   );
 }
 
-const results = [
+// A table row is either a region heading or one model's scores.
+type RegionRow = { region: string };
+type ScoreRow = { model: string; val: string; test: string; best?: boolean };
+
+const results: (RegionRow | ScoreRow)[] = [
   { region: "Indian Ocean (0.25°, 1997–2020)" },
   { model: "Day-of-year climatology", val: "0.254", test: "—" },
   { model: "3D-conv baseline (±4 days)", val: "0.130", test: "0.131" },
@@ -66,7 +73,7 @@ function ResultsTable() {
         </thead>
         <tbody>
           {results.map((r, i) =>
-            r.region ? (
+            "region" in r ? (
               <tr key={i}>
                 <td colSpan={3} style={{ ...cell, fontWeight: 600, paddingTop: "16px" }}>
                   {r.region}

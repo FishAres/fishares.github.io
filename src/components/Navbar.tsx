@@ -1,8 +1,10 @@
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { Link } from "react-router";
 
+type NavItem = { name: string; link: string };
+
 const Navbar = () => {
-  const items = [
+  const items: NavItem[] = [
     { name: "Home", link: "/" },
     { name: "Research", link: "/research" },
     { name: "CV", link: "/cv" },
